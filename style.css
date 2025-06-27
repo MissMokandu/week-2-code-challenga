@@ -1,87 +1,93 @@
-body {
-  font-family: 'Quicksand', sans-serif;
-  background-color: #eaddd7;
-  color: #5e3827;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
-
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  text-align: center;
-  margin-top: 2rem;
-  color: #221212;
-}
-
-#introductorySection {
-  max-width: 800px;
+/* RSVP Form Styling */
+#guestForm {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
   margin: 2rem auto;
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 600px;
 }
 
-table {
-  width: 90%;
-  margin: 2rem auto;
-  border-collapse: collapse;
-  background-color: #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-th, td {
-  padding: 1rem;
-  text-align: left;
-}
-
-th {
-  background-color: #79160e;
-  font-weight: bold;
-  color: #ccc;
-}
-
-td input {
-  width: 90%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+#guestInput {
+  flex: 1;
+  padding: 0.75rem;
   font-size: 1rem;
+  border: 2px solid #c6b4a8;
+  border-radius: 10px;
+  background-color: #fefefe;
+  color: #5e3827;
+  outline: none;
 }
 
-td button {
-  background-color: #79160e;
-  color: white;
-  padding: 0.5rem 1rem;
+#guestInput::placeholder {
+  color: #b89d91;
+}
+
+#guestForm button {
+  background-color: #690f0f;
+  color: #fff;
   border: none;
-  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-td button:hover {
-  background-color: #9c5c5c;
+#guestForm button:hover {
+  background-color: #8c4444;
 }
 
-div {
-  max-width: 800px;
-  margin: 2rem auto;
+/* Guest List Styling */
+#guestList {
+  list-style: decimal inside;
+  padding-left: 2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+#guestList li {
   background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  border: 1px solid #d3c1b6;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #5e3827;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-h3 {
-  font-family: 'Playfair Display', serif;
-  color: #8c4444;
-  font-size: 1.5rem;
+/* RSVP and Remove Buttons inside list */
+.guest-actions {
+  display: flex;
+  gap: 0.5rem;
 }
 
-p {
-  font-size: 1rem;
+.guest-actions button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
+
+.rsvp-btn {
+  background-color: #d0c3bb;
+  color: #3b2e2e;
+}
+
+.rsvp-btn.attending {
+  background-color: #91c499;
+  color: #4b1d0f;
+}
+
+.remove-btn {
+  background-color: #e7b1ac;
+  color: #661010;
+}
+
+.remove-btn:hover {
+  background-color: #cc9393;
+}
+
